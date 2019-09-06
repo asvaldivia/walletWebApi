@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Balance.cs" />
     <Compile Include="Billetera.cs">
       <DependentUpon>BilleteraDatosModel.tt</DependentUpon>
     </Compile>

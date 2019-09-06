@@ -20,5 +20,51 @@ namespace WalletWebApi.Controllers
                 return billetrasEntities.Billeteras.ToList();
             }
         }
+
+        [HttpPost]
+        public IHttpActionResult AgregarTransaccion([FromBody]Billetera billetera)
+        {
+            if (ModelState.IsValid)
+            {
+                dbContext.Billeteras.Add(billetera);
+                dbContext.SaveChanges();
+                return Ok(billetera);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+       //// [HttpGet]
+       // public Balance GetBalance()
+       // {
+
+       //     Billetera billetera = new Billetera();
+       //     using (BilleteraEntities billetrasEntities = new BilleteraEntities())
+       //     {
+       //         var transacciones = billetrasEntities.Billeteras.ToList();
+       //         int retiro = 0;
+       //         int deposito = 0;
+       //         int balances = 0;
+       //         foreach (var transaccion in transacciones)
+       //         {
+       //             if (transaccion.operacion == "retiro")
+       //             {
+       //                 retiro = retiro + transaccion.monto;
+       //             }
+       //             else
+       //             {
+       //                 deposito = deposito + transaccion.monto;
+       //             }
+       //         }
+       //         balances = deposito - retiro;
+       //         Balance bal = new Balance
+       //         {
+       //             balance = balances
+       //         };
+       //         return bal;
+       //     }
+       // }
     }
 }
