@@ -1,0 +1,12 @@
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\Datos.dll.config
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\Datos.dll
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\Datos.pdb
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\EntityFramework.dll
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\EntityFramework.xml
+C:\wallet\walletWebApi\WalletWebApi\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\wallet\walletWebApi\WalletWebApi\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\wallet\walletWebApi\WalletWebApi\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\wallet\walletWebApi\WalletWebApi\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\wallet\walletWebApi\WalletWebApi\Datos\obj\Debug\Datos.dll
+C:\wallet\walletWebApi\WalletWebApi\Datos\obj\Debug\Datos.pdb

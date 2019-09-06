@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BilleteraModelStoreContainer" CdmEntityContainer="BilleteraEntities">
+    <EntitySetMapping Name="Billeteras">
+      <EntityTypeMapping TypeName="BilleteraModel.Billetera">
+        <MappingFragment StoreEntitySet="Billetera">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="operacion" ColumnName="operacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
