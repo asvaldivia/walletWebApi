@@ -11,5 +11,14 @@ namespace WalletWebApi.Controllers
     public class BilleterasController : ApiController
     {
         private BilleteraEntities dbContext = new BilleteraEntities();
+
+        [HttpGet]
+        public IEnumerable<Billetera> Get()
+        {
+            using (BilleteraEntities billetrasEntities = new BilleteraEntities())
+            {
+                return billetrasEntities.Billeteras.ToList();
+            }
+        }
     }
 }

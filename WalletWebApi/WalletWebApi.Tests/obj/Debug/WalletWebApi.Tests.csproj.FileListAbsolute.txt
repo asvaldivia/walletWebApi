@@ -52,3 +52,8 @@ C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\obj\Debug\WalletWebApi.Te
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\obj\Debug\WalletWebApi.Tests.csproj.CopyComplete
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\obj\Debug\WalletWebApi.Tests.dll
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\obj\Debug\WalletWebApi.Tests.pdb
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\bin\Debug\Datos.dll
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\bin\Debug\EntityFramework.dll
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\bin\Debug\Datos.pdb
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\bin\Debug\Datos.dll.config
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi.Tests\bin\Debug\EntityFramework.xml

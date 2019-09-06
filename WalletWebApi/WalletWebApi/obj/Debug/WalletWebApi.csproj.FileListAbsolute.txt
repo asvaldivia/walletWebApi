@@ -99,3 +99,5 @@ C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\obj\Debug\WalletWebApi.csproj.C
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\obj\Debug\WalletWebApi.csproj.CopyComplete
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\obj\Debug\WalletWebApi.dll
 C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\obj\Debug\WalletWebApi.pdb
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\bin\EntityFramework.SqlServer.dll
+C:\wallet\walletWebApi\WalletWebApi\WalletWebApi\bin\EntityFramework.SqlServer.xml
