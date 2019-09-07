@@ -24,6 +24,10 @@ namespace WalletWebApi.Controllers
         [HttpPost]
         public IHttpActionResult AgregarTransaccion([FromBody]Billetera billetera)
         {
+            if(esDeposito(billetera.operacion) is false && esRetiro(billetera.operacion) is false)
+            {
+                return BadRequest();
+            }
             if (transaccionMayorACero(billetera.monto) is false)
             {
                 return BadRequest();
