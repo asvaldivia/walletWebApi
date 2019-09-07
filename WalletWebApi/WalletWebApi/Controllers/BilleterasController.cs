@@ -24,6 +24,19 @@ namespace WalletWebApi.Controllers
         [HttpPost]
         public IHttpActionResult AgregarTransaccion([FromBody]Billetera billetera)
         {
+            if (transaccionMayorACero(billetera.monto) is false)
+            {
+                return BadRequest();
+            }
+            if (esRetiro(billetera.operacion))
+            {
+                var balance = GetBalance();
+                if(retiroEsMenorIgualBalance(balance.balance, billetera.monto) is false)
+                {
+                    return BadRequest();
+                }
+            }
+            
             if (ModelState.IsValid)
             {
                 dbContext.Billeteras.Add(billetera);
@@ -46,19 +59,18 @@ namespace WalletWebApi.Controllers
                 var transacciones = billetrasEntities.Billeteras.ToList();
                 int retiro = 0;
                 int deposito = 0;
-                int balances = 0;
                 foreach (var transaccion in transacciones)
                 {
-                    if (transaccion.operacion == "retiro")
+                    if (esRetiro(transaccion.operacion))
                     {
                         retiro = retiro + transaccion.monto;
                     }
-                    else
+                    if(esDeposito(transaccion.operacion))
                     {
                         deposito = deposito + transaccion.monto;
                     }
                 }
-                balances = deposito - retiro;
+                int balances = calcularBalance(deposito, retiro);
                 Balance bal = new Balance
                 {
                     balance = balances
@@ -66,5 +78,51 @@ namespace WalletWebApi.Controllers
                 return bal;
             }
         }
+
+        public bool transaccionMayorACero(int monto)
+        {
+            if(monto > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool retiroEsMenorIgualBalance(int balance, int retiro)
+        {
+            if (retiro > balance)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public int calcularBalance(int totalDeposito, int totalRetiro)
+        {
+            int balance = 0;
+            return balance = totalDeposito - totalRetiro;
+
+        }
+
+        public bool esRetiro(string transaccion)
+        {
+            if(transaccion == "retiro")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool esDeposito(string transaccion)
+        {
+            if (transaccion == "deposito")
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }
