@@ -20,7 +20,7 @@ namespace WalletWebApi.Controllers
                 return billetrasEntities.Billeteras.ToList();
             }
         }
-        [Route("add_transaction")]
+        //[Route("add_transaction")]
         [HttpPost]
         public IHttpActionResult AgregarTransaccion([FromBody]Billetera billetera)
         {
